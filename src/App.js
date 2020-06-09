@@ -1,25 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+// react router dom
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// pages
+import About from "./pages/AboutPage";
+import Cart from "./pages/CartPage";
+import Checkout from "./pages/CheckoutPage";
+import Error from "./pages/ErrorPage";
+import Home from "./pages/HomePage";
+import Login from "./pages/LoginPage";
+import ProductDetails from "./pages/ProductDetailsPage";
+import Products from "./pages/ProductsPage";
+// components
+import ScrollToTop from "./components/Scroll/ScrollToTop";
+import Navbar from "./components/Navbar/";
+
+import { Application } from "react-rainbow-components";
+
+const theme = {
+  rainbow: {
+    palette: {
+      brand: "#6860db",
+      mainBackground: "#d9d9d9",
+    },
+  },
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ScrollToTop>
+        <React.Fragment>
+          <Application theme={theme}>
+            <Navbar />
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/about">
+                <About />
+              </Route>
+              <Route exact path="/cart">
+                <Cart />
+              </Route>
+              <Route exact path="/checkout">
+                <Checkout />
+              </Route>
+              <Route exact path="/login">
+                <Login />
+              </Route>
+              <Route exact path="/products">
+                <Products />
+              </Route>
+              <Route path="/product/:id" children={<ProductDetails />}>
+                {/*whenever we're dealing with url parameters we're going to use children prop */}
+              </Route>
+              <Route>
+                <Error />
+              </Route>
+            </Switch>
+          </Application>
+        </React.Fragment>
+      </ScrollToTop>
+    </Router>
   );
 }
 
