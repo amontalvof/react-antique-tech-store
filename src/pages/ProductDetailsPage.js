@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import { ProductContext } from "../context/products";
+//import {CartContext} from '../context/cart'
+import Loading from "../components/Loading";
+import Details from "../components/Details/";
 
 export default function ProductDetailsPage() {
-  //console.log(useParams());
   const { id } = useParams();
 
-  return <h1>hello from product details page. Product id is: {id}</h1>;
+  const { products } = useContext(ProductContext);
+  const product = products.find((item) => item.id === parseInt(id));
+
+  return (
+    <div>
+      {products.length === 0 ? (
+        <Loading pTop={false} />
+      ) : (
+        <Details product={product} />
+      )}
+    </div>
+  );
 }

@@ -7,10 +7,10 @@ export default function index({ pTop }) {
     <LoadingWrapper pTop={pTop}>
       <div className="loadingSpinner">
         <ScaleLoader
-          height="70"
-          width="8"
-          radius="4"
-          margin="4"
+          height="70px"
+          width="8px"
+          radius="4px"
+          margin="4px"
           color="#6860db"
           loading={true}
         />

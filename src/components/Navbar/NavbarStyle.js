@@ -13,7 +13,7 @@ export const NavbarWrapper = styled.nav`
     top: 0;
     width: 100%;
     z-index: 1;
-    font-size: 3vh;
+    font-size: 5vh;
     color: #303030;
   }
 

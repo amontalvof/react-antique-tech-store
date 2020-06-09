@@ -6,7 +6,7 @@ export const InfoWrapper = styled.div`
   padding-top: 50px;
 
   p {
-    font-size: 2vh;
+    font-size: 2.5vh;
     margin: 0 20px 0;
   }
 
@@ -18,7 +18,6 @@ export const InfoWrapper = styled.div`
     padding-top: 130px;
 
     p {
-      font-size: 2.5vh;
       margin: 0 100px 0;
     }
   }
