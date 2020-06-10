@@ -11,7 +11,7 @@ export const CartItemWrapper = styled.div`
 
   .flex-container > div {
     /*background: white;*/
-    width: 500px;
+    width: 300px;
     text-align: center;
     align-self: center;
   }

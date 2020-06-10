@@ -4,6 +4,7 @@ export const CartListWrapper = styled.div`
   min-height: 100vh;
   background-image: linear-gradient(#808080, #d9d9d9);
   text-align: center;
+  padding-top: 80px;
 
   .flex-container {
     /*background: red;*/
@@ -37,6 +38,7 @@ export const CartListWrapper = styled.div`
   }
 
   @media screen and (min-width: 767px) {
+    padding-top: 130px;
     .divisor {
       display: none;
     }

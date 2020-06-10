@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ProductListWrapper = styled.div`
-  padding-top: 50px;
+  padding-top: 80px;
   padding-bottom: 50px;
   background-image: linear-gradient(#808080, #d9d9d9);
 

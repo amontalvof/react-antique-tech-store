@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const DetailsWrapper = styled.div`
   background-image: linear-gradient(#808080, #d9d9d9);
-  padding-top: 50px;
+  padding-top: 80px;
   .flex-container {
     display: flex;
     flex-flow: row wrap;
