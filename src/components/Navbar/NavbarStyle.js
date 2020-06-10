@@ -67,11 +67,9 @@ export const NavbarWrapper = styled.nav`
     transform: scaleX(1);
   }
 
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 415px) {
     ul.topnav {
-      /*visibility: hidden;*/
-      padding-right: 10vw;
-      padding-left: 10vw;
+      display: block;
     }
   }
 
@@ -82,9 +80,11 @@ export const NavbarWrapper = styled.nav`
     }
   }
 
-  @media screen and (min-width: 415px) {
+  @media screen and (min-width: 1025px) {
     ul.topnav {
-      display: block;
+      /*visibility: hidden;*/
+      padding-right: 10vw;
+      padding-left: 10vw;
     }
   }
 `;

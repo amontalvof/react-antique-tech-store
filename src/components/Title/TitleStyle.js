@@ -11,5 +11,6 @@ export const TitleWrapper = styled.div`
     font-weight: 900;
     text-shadow: 2px 2px 3px #6860db, -2px -2px 3px #6860db;
     color: #303030;
+    letter-spacing: 0.3rem;
   }
 `;

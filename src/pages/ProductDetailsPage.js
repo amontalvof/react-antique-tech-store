@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { ProductContext } from "../context/products";
-//import {CartContext} from '../context/cart'
 import Loading from "../components/Loading";
 import Details from "../components/Details/";
 

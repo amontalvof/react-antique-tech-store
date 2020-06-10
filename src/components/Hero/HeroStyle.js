@@ -7,7 +7,10 @@ export const HeroWrapper = styled.div`
     align-items: center;
     justify-content: center;
     min-height: ${(props) => (props.max ? "100vh" : "60vh")};
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background: ${(props) =>
+        props.cart
+          ? "linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))"
+          : "linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"},
       url(${(props) => props.img}) center/ cover no-repeat;
   }
 
@@ -28,15 +31,15 @@ export const HeroWrapper = styled.div`
       -2px -2px 3px rgb(255, 255, 255);
   }
 
-  @media screen and (min-width: 1025px) {
-    .title {
-      font-size: 4.5rem;
-    }
-  }
-
   @media screen and (min-width: 767px) {
     .title {
       font-size: 3.5rem;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    .title {
+      font-size: 4.5rem;
     }
   }
 `;

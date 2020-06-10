@@ -1,10 +1,14 @@
 import React from "react";
 import { InfoWrapper } from "./InfoStyle";
 import Title from "../Title";
+import Hero from "../Hero";
+import img from "../../assets/images/AboutBgd.jpg";
 
 function index() {
   return (
     <InfoWrapper>
+      <Hero img={img} />
+      <br />
       <Title title={"About Us"} />
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
@@ -20,6 +24,8 @@ function index() {
         excepturi earum, culpa debitis delectus quod, explicabo laborum placeat
         nesciunt eveniet.
       </p>
+      <br />
+      <br />
     </InfoWrapper>
   );
 }

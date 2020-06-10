@@ -27,7 +27,7 @@ function index() {
           >
             <Button
               label="Home Page"
-              variant="neutral"
+              variant="border-filled"
               className="rainbow-m-around_large"
               style={{ fontWeight: "bold" }}
             />

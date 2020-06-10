@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const LoadingWrapper = styled.div`
-  height: ${(props) => (props.pTop ? "40vh" : "100vh")};
+  min-height: ${(props) => (props.pTop ? "40vh" : "100vh")};
   background-image: linear-gradient(#808080, #d9d9d9);
 
   .loadingSpinner {

@@ -18,11 +18,11 @@ export const ProductListWrapper = styled.div`
     line-height: 75px;
   }
 
-  @media screen and (min-width: 1025px) {
-    padding-top: ${(props) => (props.pTop ? "20px" : "100px")};
-  }
-
   @media screen and (min-width: 767px) {
     padding-top: ${(props) => (props.pTop ? "20px" : "130px")};
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding-top: ${(props) => (props.pTop ? "20px" : "100px")};
   }
 `;

@@ -40,15 +40,15 @@ export const DetailsWrapper = styled.div`
     font-size: 1.1rem;
   }
 
+  @media screen and (min-width: 767px) {
+    padding-top: 130px;
+    min-height: 100vh;
+  }
+
   @media screen and (min-width: 1023px) {
     padding-top: 100px;
     p {
       font-size: 1.3rem;
     }
-  }
-
-  @media screen and (min-width: 767px) {
-    padding-top: 130px;
-    height: 105vh;
   }
 `;

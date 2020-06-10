@@ -1,4 +1,6 @@
 // products context
+// hay que importar ProductProvider en el index.js
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import url from "../utils/URL";

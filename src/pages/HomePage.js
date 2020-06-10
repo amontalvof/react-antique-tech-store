@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 import { Button } from "react-rainbow-components";
 import ProductList from "../components/ProductList";
 import Loading from "../components/Loading";
+import img from "../assets/images/HomeBgd.jpg";
 
 export default function HomePage() {
   const { loading, featured } = useContext(ProductContext);
   return (
     <React.Fragment>
       <div>
-        <Hero>
+        <Hero img={img} home={true}>
           <Link
             style={{
               textDecoration: "none",
@@ -20,7 +21,7 @@ export default function HomePage() {
           >
             <Button
               label="Our products"
-              variant="neutral"
+              variant="border-filled"
               className="rainbow-m-around_large"
               style={{ fontWeight: "bold" }}
             />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Error404Wrapper = styled.div`
   #notfound {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(#808080, #d9d9d9);
   }
 

@@ -1,11 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { CartContext } from "../../context/cart";
 import { NavbarWrapper } from "./NavbarStyle";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import { Drawer } from "react-rainbow-components";
+import { BadgeOverlay } from "react-rainbow-components";
 
 function Navbar() {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const { cartItems } = useContext(CartContext);
 
   return (
     <NavbarWrapper>
@@ -55,7 +58,15 @@ function Navbar() {
             }}
             to="/cart"
           >
-            <h3>Cart</h3>
+            <h3>
+              <BadgeOverlay
+                value={cartItems}
+                position="bottom-right"
+                isHidden={cartItems === 0 ? true : false}
+              >
+                Cart
+              </BadgeOverlay>
+            </h3>
           </Link>
         </li>
         <li className="right">
@@ -147,7 +158,13 @@ function Navbar() {
                 style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
                 onClick={() => setOpenDrawer(false)}
               >
-                Cart
+                <BadgeOverlay
+                  value={cartItems}
+                  position="bottom-right"
+                  isHidden={cartItems === 0 ? true : false}
+                >
+                  Cart
+                </BadgeOverlay>
               </h2>
             </Link>
           </li>
