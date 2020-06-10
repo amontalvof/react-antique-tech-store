@@ -24,8 +24,6 @@ export const DetailsWrapper = styled.div`
     font-size: 2rem;
     text-transform: capitalize;
     letter-spacing: 0.3rem;
-    text-shadow: 2px 2px 3px rgb(255, 255, 255),
-      -2px -2px 3px rgb(255, 255, 255);
   }
 
   h2 {

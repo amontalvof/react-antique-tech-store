@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeroWrapper = styled.div`
   .heroBack {
-    text-align: left;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,6 +23,7 @@ export const HeroWrapper = styled.div`
     letter-spacing: 0.3rem;
   }
   p {
+    display: none;
     color: #303030;
     font-size: 2rem;
     text-transform: capitalize;
@@ -32,12 +33,18 @@ export const HeroWrapper = styled.div`
   }
 
   @media screen and (min-width: 767px) {
+    p {
+      display: block;
+    }
     .title {
       font-size: 3.5rem;
     }
   }
 
   @media screen and (min-width: 1025px) {
+    .heroBack {
+      text-align: left;
+    }
     .title {
       font-size: 4.5rem;
     }
