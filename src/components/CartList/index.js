@@ -26,7 +26,8 @@ export default function index({ cart, total, user }) {
           </Card>
         </div>
         <div>
-          <Card>
+          <Card className="stickyPosition">
+            <div></div>
             <h2>
               Subtotal: <strong style={{ color: "#3a2fd0" }}>${total}</strong>
             </h2>

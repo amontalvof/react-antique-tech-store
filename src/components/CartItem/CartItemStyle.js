@@ -25,14 +25,14 @@ export const CartItemWrapper = styled.div`
 
   h4 {
     color: #303030;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: 0.3rem;
   }
 
   h5 {
     color: #3a2fd0;
-    font-size: 1.3rem;
+    font-size: 1rem;
     text-transform: capitalize;
     letter-spacing: 0.3rem;
   }
@@ -67,7 +67,13 @@ export const CartItemWrapper = styled.div`
 
   @media screen and (min-width: 1023px) {
     .flex-container > div {
-      width: 180px;
+      width: 170px;
+    }
+  }
+
+  @media screen and (max-width: 350px) {
+    .flex-container > div {
+      width: 150px;
     }
   }
 `;

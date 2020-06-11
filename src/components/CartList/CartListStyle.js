@@ -43,4 +43,12 @@ export const CartListWrapper = styled.div`
       display: none;
     }
   }
+
+  @media screen and (min-width: 1025px) {
+    .stickyPosition {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 200px;
+    }
+  }
 `;
