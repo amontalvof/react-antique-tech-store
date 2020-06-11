@@ -22,7 +22,7 @@ const theme = {
     palette: {
       error: "#FE4849",
       brand: "#6860db",
-      mainBackground: "#d9d9d9",
+      mainBackground: "#ebeafa",
     },
   },
 };

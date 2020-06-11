@@ -6,7 +6,6 @@ import ProductList from "../components/ProductList";
 export default function ProductsPage() {
   //console.log(useContext(ProductContext));
   const { loading, products } = useContext(ProductContext);
-  //console.log(products);
 
   return (
     <div>

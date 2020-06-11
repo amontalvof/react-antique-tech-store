@@ -9,6 +9,7 @@ import img from "../assets/images/HomeBgd.jpg";
 
 export default function HomePage() {
   const { loading, featured } = useContext(ProductContext);
+
   return (
     <React.Fragment>
       <div>

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const InfoWrapper = styled.div`
   min-height: 100vh;
-  background-image: linear-gradient(#808080, #d9d9d9);
+  background-image: linear-gradient(#ebeafa, #ebeafa);
 
   p {
     font-size: 2.5vh;

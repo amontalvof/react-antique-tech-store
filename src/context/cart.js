@@ -65,18 +65,13 @@ function CartProvider({ children }) {
 
   //add to cart
   const addToCart = (product) => {
-    const {
-      id,
-      image: { url },
-      title,
-      price,
-    } = product;
+    const { id, image, title, price } = product;
     const item = [...cart].find((item) => item.id === id);
     if (item) {
       increaseAmount(id);
       return; //return from the function.
     } else {
-      const newItem = { id, image: url, title, price, amount: 1 };
+      const newItem = { id, image, title, price, amount: 1 };
       const newCart = [...cart, newItem];
       setCart(newCart);
     }

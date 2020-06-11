@@ -30,7 +30,7 @@ export default function Details({ product }) {
           />
         </div>
         <div>
-          <img src={image.url} alt={title} />
+          <img src={image} alt={title} />
         </div>
       </div>
     </DetailsWrapper>

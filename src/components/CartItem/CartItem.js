@@ -7,6 +7,7 @@ export default function CartItem({ id, image, title, price, amount }) {
   const { removeItem, increaseAmount, decreaseAmount } = useContext(
     CartContext
   );
+
   return (
     <CartItemWrapper>
       <div className="flex-container">

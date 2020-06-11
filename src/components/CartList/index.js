@@ -14,14 +14,16 @@ export default function index({ cart, total, user }) {
       <Title title={"Your Cart"} />
       <div className="flex-container">
         <div style={{ flexBasis: "1000px" }}>
-          {cart.map((item) => {
-            return (
-              <div key={item.id}>
-                <CartItem {...item} />
-                <hr className="divisor" />
-              </div>
-            );
-          })}
+          <Card>
+            {cart.map((item) => {
+              return (
+                <div key={item.id}>
+                  <CartItem {...item} />
+                  <hr className="divisor" />
+                </div>
+              );
+            })}
+          </Card>
         </div>
         <div>
           <Card>

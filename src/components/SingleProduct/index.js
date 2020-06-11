@@ -6,11 +6,13 @@ import { SingleProductWrapper } from "./SingleProductStyle";
 
 export default function index(props) {
   const { image, title, id, price } = props;
+  //console.log(image);
+
   return (
     <SingleProductWrapper>
       <Card title={title}>
         <div className="rainbow-p-around_xx-medium rainbow-align-content_center rainbow-flex_column">
-          <img src={image.url} alt="product" style={{ width: "80%" }} />
+          <img src={image} alt="product" style={{ width: "80%" }} />
           <Link
             to={`product/${id}`}
             style={{
