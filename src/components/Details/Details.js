@@ -8,6 +8,7 @@ export default function Details({ product }) {
   const { image, title, price, description } = product;
   const history = useHistory();
   const { addToCart } = useContext(CartContext);
+  //console.log(image);
 
   return (
     <DetailsWrapper>
@@ -30,7 +31,7 @@ export default function Details({ product }) {
           />
         </div>
         <div>
-          <img src={image} alt={title} />
+          <img src={`../${image}`} alt={title} />
         </div>
       </div>
     </DetailsWrapper>

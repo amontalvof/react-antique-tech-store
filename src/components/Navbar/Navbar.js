@@ -1,5 +1,6 @@
 import React, { useState, useContext } from "react";
 import { CartContext } from "../../context/cart";
+import { UserContext } from "../../context/user";
 import { NavbarWrapper } from "./NavbarStyle";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
@@ -9,6 +10,19 @@ import { BadgeOverlay } from "react-rainbow-components";
 function Navbar() {
   const [openDrawer, setOpenDrawer] = useState(false);
   const { cartItems } = useContext(CartContext);
+  const { logedin, handleLoginOpen, handleCloseSession } = useContext(
+    UserContext
+  );
+
+  const loginSmallNavbar = () => {
+    setOpenDrawer(false);
+    handleLoginOpen();
+  };
+
+  const logoutSmallNavbar = () => {
+    setOpenDrawer(false);
+    handleCloseSession();
+  };
 
   return (
     <NavbarWrapper>
@@ -59,26 +73,35 @@ function Navbar() {
             to="/cart"
           >
             <h3>
-              <BadgeOverlay
-                value={cartItems}
-                position="bottom-right"
-                isHidden={cartItems === 0 ? true : false}
-              >
-                Cart
-              </BadgeOverlay>
+              {cartItems < 1 ? (
+                "Cart"
+              ) : (
+                <BadgeOverlay value={cartItems} position="bottom-right">
+                  Cart
+                </BadgeOverlay>
+              )}
             </h3>
           </Link>
         </li>
-        <li className="right">
-          <Link
-            style={{
-              textDecoration: "none",
+        {logedin ? (
+          <li
+            className="right"
+            onClick={() => {
+              handleCloseSession();
             }}
-            to="/login"
           >
-            <h3>Login</h3>
-          </Link>
-        </li>
+            <h3 className="openLogin">Logout</h3>
+          </li>
+        ) : (
+          <li
+            className="right"
+            onClick={() => {
+              handleLoginOpen();
+            }}
+          >
+            <h3 className="openLogin">Login</h3>
+          </li>
+        )}
       </ul>
       <Drawer
         header="Antique Tech Store"
@@ -132,21 +155,26 @@ function Navbar() {
               </h2>
             </Link>
           </li>
-          <li>
-            <Link
-              style={{
-                textDecoration: "none",
-              }}
-              to="/login"
-            >
+          {logedin ? (
+            <li>
               <h2
                 style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
-                onClick={() => setOpenDrawer(false)}
+                onClick={() => logoutSmallNavbar()}
+              >
+                Logout
+              </h2>
+            </li>
+          ) : (
+            <li>
+              <h2
+                style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
+                onClick={() => loginSmallNavbar()}
               >
                 Login
               </h2>
-            </Link>
-          </li>
+            </li>
+          )}
+
           <li>
             <Link
               style={{
@@ -158,13 +186,13 @@ function Navbar() {
                 style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
                 onClick={() => setOpenDrawer(false)}
               >
-                <BadgeOverlay
-                  value={cartItems}
-                  position="bottom-right"
-                  isHidden={cartItems === 0 ? true : false}
-                >
-                  Cart
-                </BadgeOverlay>
+                {cartItems < 1 ? (
+                  "Cart"
+                ) : (
+                  <BadgeOverlay value={cartItems} position="bottom-right">
+                    Cart
+                  </BadgeOverlay>
+                )}
               </h2>
             </Link>
           </li>

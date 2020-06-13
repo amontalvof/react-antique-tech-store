@@ -2,9 +2,10 @@
 // hay que importar ProductProvider en el index.js
 
 import React, { useState, useEffect } from "react";
-import axios from "axios";
-import url from "../utils/URL";
+//import axios from "axios";
+//import url from "../utils/URL";
 import { featuredProducts, flattenProducts } from "../utils/helpers";
+import { productsData } from "../utils/productsData";
 
 export const ProductContext = React.createContext();
 
@@ -16,7 +17,7 @@ export default function ProductProvider({ children }) {
   const [products, setProducts] = useState([]);
   const [featured, setFeatured] = useState([]);
 
-  useEffect(() => {
+  /*useEffect(() => {
     setLoading(true);
     axios //perform a get request
       .get(`${url}/products`)
@@ -28,6 +29,15 @@ export default function ProductProvider({ children }) {
         setLoading(false);
       });
     return () => {};
+  }, []);*/
+
+  useEffect(() => {
+    setLoading(true);
+    const featured = featuredProducts(productsData);
+    const products = flattenProducts(productsData);
+    setFeatured(featured);
+    setProducts(products);
+    setLoading(false);
   }, []);
 
   return (

@@ -1,5 +1,12 @@
 import React from "react";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 export default function LoginPage() {
-  return <h1>hello from login page</h1>;
+  return (
+    <React.Fragment>
+      <Login />
+      <Register />
+    </React.Fragment>
+  );
 }

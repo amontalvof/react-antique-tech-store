@@ -15,7 +15,7 @@ export const NavbarWrapper = styled.nav`
     z-index: 1;
     font-size: 5vh;
     color: #303030;
-    border-bottom: 3px solid #303030;
+    border-bottom: 3px solid #6860db;
   }
 
   .navbarLinks {
@@ -36,7 +36,7 @@ export const NavbarWrapper = styled.nav`
     top: 0;
     width: 100%;
     z-index: 1;
-    border-bottom: 3px solid #303030;
+    border-bottom: 3px solid #6860db;
   }
   li {
     float: left;
@@ -67,6 +67,10 @@ export const NavbarWrapper = styled.nav`
 
   h3:hover:after {
     transform: scaleX(1);
+  }
+
+  .openLogin:hover {
+    cursor: pointer;
   }
 
   @media screen and (min-width: 415px) {

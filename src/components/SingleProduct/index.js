@@ -25,9 +25,9 @@ export default function index(props) {
           </Link>
           <h1
             className="rainbow-p-top_small rainbow-font-size-heading_large"
-            style={{ color: "#6860db" }}
+            style={{ color: "#3a2fd0" }}
           >
-            ${price}
+            <strong>${price}</strong>
           </h1>
         </div>
       </Card>

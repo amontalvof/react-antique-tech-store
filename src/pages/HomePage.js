@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { Button } from "react-rainbow-components";
 import ProductList from "../components/ProductList";
 import Loading from "../components/Loading";
+import Login from "../components/Login";
+import Register from "../components/Register";
 import img from "../assets/images/HomeBgd.jpg";
 
 export default function HomePage() {
@@ -12,6 +14,8 @@ export default function HomePage() {
 
   return (
     <React.Fragment>
+      <Login />
+      <Register />
       <div>
         <Hero img={img} home={true}>
           <Link

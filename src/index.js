@@ -5,12 +5,15 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import ProductProvider from "./context/products";
 import { CartProvider } from "./context/cart";
+import { UserProvider } from "./context/user";
 
 ReactDOM.render(
   <React.StrictMode>
     <ProductProvider>
       <CartProvider>
-        <App />
+        <UserProvider>
+          <App />
+        </UserProvider>
       </CartProvider>
     </ProductProvider>
   </React.StrictMode>,
