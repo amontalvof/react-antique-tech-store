@@ -21,6 +21,7 @@ export default function Login() {
     // limpiar campos
     e.target.reset();
     handleRegisterClose();
+    handleLoginOpen();
   };
   return (
     <Modal

@@ -1,6 +1,6 @@
 // user context
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const UserContext = React.createContext();
 
@@ -9,6 +9,8 @@ function UserProvider({ children }) {
   const [registerin, setRegisterin] = useState({});
   const [loginIsOpen, setLoginIsOpen] = useState(false);
   const [registerIsOpen, setRegisterIsOpen] = useState(false);
+
+  useEffect(() => {}, []);
 
   const handleLoginOpen = () => {
     setLoginIsOpen(true);
@@ -30,22 +32,19 @@ function UserProvider({ children }) {
 
   const handleRegisterSubmit = (userr) => {
     //console.log("registro", userr);
+    setLogedin({ log: false, reg: true });
     setRegisterin(userr);
   };
 
-  const handleLoginSubmit = (userl) => {
-    //console.log("login", userl);
-    const { passwordlogin, emaillogin } = userl;
-    const { passwordregistro, emailregistro } = registerin;
-
-    if (passwordlogin === passwordregistro && emaillogin === emailregistro) {
-      setLogedin(true);
-    }
+  const handleLoginSubmit = () => {
+    setLogedin(true);
   };
 
   const handleCloseSession = () => {
     setLogedin(false);
   };
+
+  //console.log(logedinMsg);
 
   return (
     <UserContext.Provider

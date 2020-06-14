@@ -1,5 +1,14 @@
 import React from "react";
+import CreditCard from "../components/CreditCard";
+import Login from "../components/Login";
+import Register from "../components/Register";
 
 export default function CheckoutPage() {
-  return <h1>hello from checkout page</h1>;
+  return (
+    <React.Fragment>
+      <Login />
+      <Register />
+      <CreditCard />
+    </React.Fragment>
+  );
 }

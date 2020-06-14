@@ -12,6 +12,7 @@ import img from "../assets/images/HomeBgd.jpg";
 export default function HomePage() {
   const { loading, featured } = useContext(ProductContext);
 
+  //console.log(logedin);
   return (
     <React.Fragment>
       <Login />

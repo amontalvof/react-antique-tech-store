@@ -10,9 +10,12 @@ import { BadgeOverlay } from "react-rainbow-components";
 function Navbar() {
   const [openDrawer, setOpenDrawer] = useState(false);
   const { cartItems } = useContext(CartContext);
-  const { logedin, handleLoginOpen, handleCloseSession } = useContext(
-    UserContext
-  );
+  const {
+    logedin,
+    handleLoginOpen,
+    handleCloseSession,
+    registerin,
+  } = useContext(UserContext);
 
   const loginSmallNavbar = () => {
     setOpenDrawer(false);
@@ -65,6 +68,20 @@ function Navbar() {
             <h3>Products</h3>
           </Link>
         </li>
+        <li>
+          {logedin ? (
+            <Link
+              style={{
+                textDecoration: "none",
+              }}
+              to="/checkout"
+            >
+              <h3>Pay now</h3>
+            </Link>
+          ) : (
+            <div></div>
+          )}
+        </li>
         <li className="right">
           <Link
             style={{
@@ -90,7 +107,7 @@ function Navbar() {
               handleCloseSession();
             }}
           >
-            <h3 className="openLogin">Logout</h3>
+            <h3 className="openLogin">Log out</h3>
           </li>
         ) : (
           <li
@@ -99,12 +116,16 @@ function Navbar() {
               handleLoginOpen();
             }}
           >
-            <h3 className="openLogin">Login</h3>
+            <h3 className="openLogin">Log in</h3>
           </li>
         )}
       </ul>
       <Drawer
-        header="Antique Tech Store"
+        header={
+          logedin
+            ? `Welcome ${registerin.usernameregistro}`
+            : "Antique Tech Store"
+        }
         slideFrom="right"
         isOpen={openDrawer}
         onRequestClose={() => setOpenDrawer(false)}
@@ -155,13 +176,32 @@ function Navbar() {
               </h2>
             </Link>
           </li>
+          <li>
+            {logedin ? (
+              <Link
+                style={{
+                  textDecoration: "none",
+                }}
+                to="/checkout"
+              >
+                <h2
+                  style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
+                  onClick={() => setOpenDrawer(false)}
+                >
+                  Pay now
+                </h2>
+              </Link>
+            ) : (
+              <div></div>
+            )}
+          </li>
           {logedin ? (
             <li>
               <h2
                 style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
                 onClick={() => logoutSmallNavbar()}
               >
-                Logout
+                Log out
               </h2>
             </li>
           ) : (
@@ -170,7 +210,7 @@ function Navbar() {
                 style={{ color: "#303030", fontSize: "3vh", margin: "10px" }}
                 onClick={() => loginSmallNavbar()}
               >
-                Login
+                Log in
               </h2>
             </li>
           )}

@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Title from "../Title";
 import { CartListWrapper } from "./CartListStyle";
 import CartItem from "../CartItem/";
 import { Link } from "react-router-dom";
 import { Button, Card } from "react-rainbow-components";
-//import Hero from "../Hero";
-//import img from "../../assets/images/CartBgd.jpg";
-//<Hero img={img} cart={true} />
-export default function index({ cart, total, user }) {
+import { UserContext } from "../../context/user";
+
+export default function CartList({ cart, total, user }) {
+  const { logedin, handleLoginOpen } = useContext(UserContext);
   return (
     <CartListWrapper>
       <br />
@@ -43,34 +43,35 @@ export default function index({ cart, total, user }) {
                 ${parseFloat((total + total * 0.1).toFixed(2))}
               </strong>{" "}
             </h2>
-            {user ? (
-              <Link
-                style={{
-                  textDecoration: "none",
-                }}
-                to="/checkout"
-              >
-                <Button
-                  label="Checkout"
-                  variant="border-filled"
-                  className="rainbow-m-around_large"
-                  style={{ fontWeight: "bold", fontSize: "1.3rem" }}
-                />
-              </Link>
+            {logedin ? (
+              <div>
+                <Link
+                  style={{
+                    textDecoration: "none",
+                  }}
+                  to="/checkout"
+                >
+                  <Button
+                    label="Pay now"
+                    variant="border-filled"
+                    className="rainbow-m-around_large"
+                    style={{ fontWeight: "bold", fontSize: "1.3rem" }}
+                  />
+                </Link>
+              </div>
             ) : (
-              <Link
-                style={{
-                  textDecoration: "none",
-                }}
-                to="/login"
-              >
+              <div>
+                <p>Log in to your account to pay</p>
                 <Button
-                  label="Login"
+                  label="Log in"
                   variant="border-filled"
                   className="rainbow-m-around_large"
                   style={{ fontWeight: "bold", fontSize: "1.3rem" }}
+                  onClick={() => {
+                    handleLoginOpen();
+                  }}
                 />
-              </Link>
+              </div>
             )}
           </Card>
         </div>

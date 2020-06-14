@@ -84,6 +84,12 @@ export const NavbarWrapper = styled.nav`
       padding-right: 5vw;
       padding-left: 5vw;
     }
+    h3 {
+      font-size: 1.5vh;
+    }
+    .smallScreenNav {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 1025px) {
@@ -91,6 +97,9 @@ export const NavbarWrapper = styled.nav`
       /*visibility: hidden;*/
       padding-right: 10vw;
       padding-left: 10vw;
+    }
+    h3 {
+      font-size: 3vh;
     }
   }
 `;

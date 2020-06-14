@@ -8,7 +8,6 @@ import Login from "../components/Login";
 import Register from "../components/Register";
 
 export default function CartPage() {
-  let user = false;
   const { cart, total } = useContext(CartContext);
 
   return (
@@ -42,7 +41,7 @@ export default function CartPage() {
             </Link>
           </div>
         ) : (
-          <CartList cart={cart} total={total} user={user} />
+          <CartList cart={cart} total={total} />
         )}
       </div>
     </React.Fragment>
