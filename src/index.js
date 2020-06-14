@@ -9,13 +9,13 @@ import { UserProvider } from "./context/user";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ProductProvider>
-      <CartProvider>
-        <UserProvider>
+    <UserProvider>
+      <ProductProvider>
+        <CartProvider>
           <App />
-        </UserProvider>
-      </CartProvider>
-    </ProductProvider>
+        </CartProvider>
+      </ProductProvider>
+    </UserProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

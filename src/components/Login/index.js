@@ -17,10 +17,10 @@ export default function Login() {
 
   const { register, errors, handleSubmit } = useForm();
 
-  const notify = () => {
+  const notify = (msg) => {
     toast.error(
       <div>
-        <h6 style={{ fontSize: "16px" }}>Error, wrong email or password!</h6>
+        <h6 style={{ fontSize: "16px" }}>{msg}</h6>
       </div>,
       {
         draggable: true,
@@ -37,10 +37,14 @@ export default function Login() {
     handleLoginClose();
     const { passwordlogin, emaillogin } = data;
     const { passwordregistro, emailregistro } = registerin;
-    if (passwordlogin !== passwordregistro || emaillogin !== emailregistro) {
-      notify();
+    if (passwordregistro === undefined || emailregistro === undefined) {
+      notify("Error, you need to register first!");
     } else {
-      handleLoginSubmit();
+      if (passwordlogin !== passwordregistro || emaillogin !== emailregistro) {
+        notify("Error, wrong email or password!");
+      } else {
+        handleLoginSubmit();
+      }
     }
 
     //console.log(passwordregistro, passwordlogin);

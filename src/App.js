@@ -13,6 +13,7 @@ import ProductDetails from "./pages/ProductDetailsPage";
 import Products from "./pages/ProductsPage";
 // components
 import ScrollToTop from "./components/Scroll/ScrollToTop";
+import ScrollButton from "./components/ScrollButton";
 import Navbar from "./components/Navbar/";
 
 import { Application } from "react-rainbow-components";
@@ -34,6 +35,7 @@ function App() {
         <React.Fragment>
           <Application theme={theme}>
             <Navbar />
+            <ScrollButton />
             <Switch>
               <Route exact path="/">
                 <Home />

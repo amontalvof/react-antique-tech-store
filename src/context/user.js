@@ -9,8 +9,15 @@ function UserProvider({ children }) {
   const [registerin, setRegisterin] = useState({});
   const [loginIsOpen, setLoginIsOpen] = useState(false);
   const [registerIsOpen, setRegisterIsOpen] = useState(false);
+  const [height, setHeight] = useState(0);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      //console.log(window.pageYOffset);
+      setHeight(window.pageYOffset);
+    });
+    return () => window.removeEventListener("scroll", () => {});
+  });
 
   const handleLoginOpen = () => {
     setLoginIsOpen(true);
@@ -32,7 +39,6 @@ function UserProvider({ children }) {
 
   const handleRegisterSubmit = (userr) => {
     //console.log("registro", userr);
-    setLogedin({ log: false, reg: true });
     setRegisterin(userr);
   };
 
@@ -44,11 +50,12 @@ function UserProvider({ children }) {
     setLogedin(false);
   };
 
-  //console.log(logedinMsg);
+  //console.log(logedin);
 
   return (
     <UserContext.Provider
       value={{
+        height,
         logedin,
         registerin,
         loginIsOpen,
