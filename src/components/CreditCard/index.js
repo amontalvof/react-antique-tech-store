@@ -173,7 +173,7 @@ export default function CreditCard() {
             minHeight: "100vh",
           }}
         >
-          <Title title={"Log in to your account first to pay"} />
+          <Title title={"Log in to your account to pay"} />
           <Link
             style={{
               textDecoration: "none",
