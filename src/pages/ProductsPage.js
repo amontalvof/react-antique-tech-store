@@ -7,19 +7,22 @@ import Register from "../components/Register";
 
 export default function ProductsPage() {
   //console.log(useContext(ProductContext));
-  const { loading, products } = useContext(ProductContext);
+  const { loading, sorted, page } = useContext(ProductContext);
+  //console.log(sorted);
 
   return (
     <React.Fragment>
       <Login />
       <Register />
-      <div>
-        {loading ? (
-          <Loading pTop={false} />
-        ) : (
-          <ProductList title="Our Products" products={products} pTop={false} />
-        )}
-      </div>
+      {loading ? (
+        <Loading pTop={false} />
+      ) : (
+        <ProductList
+          title="Our Products"
+          products={sorted[page]}
+          pTop={false}
+        />
+      )}
     </React.Fragment>
   );
 }

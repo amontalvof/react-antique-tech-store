@@ -12,7 +12,7 @@ export const NavbarWrapper = styled.nav`
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     font-size: 5vh;
     color: #303030;
     border-bottom: 3px solid #6860db;
@@ -35,7 +35,7 @@ export const NavbarWrapper = styled.nav`
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     border-bottom: 3px solid #6860db;
   }
   li {
