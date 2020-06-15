@@ -47,7 +47,8 @@ export default function ProductProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    let newProducts = [...products].sort((a, b) => a.price - b.price); //asi organizo un array por un campo
+    let newProducts = [...products];
+    //let newProducts = [...products].sort((a, b) => a.price - b.price); //asi organizo un array por un campo
     if (search !== "") {
       newProducts = newProducts.filter((item) => {
         let title = item.title.toLowerCase().trim();

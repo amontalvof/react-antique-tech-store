@@ -85,7 +85,7 @@ export const NavbarWrapper = styled.nav`
       padding-left: 5vw;
     }
     h3 {
-      font-size: 1.5vh;
+      font-size: 2vh;
     }
     .smallScreenNav {
       display: none;

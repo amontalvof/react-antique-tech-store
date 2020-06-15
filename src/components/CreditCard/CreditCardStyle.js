@@ -2,8 +2,10 @@ import styled from "styled-components";
 
 export const CreditCardWrapper = styled.div`
   min-height: 100vh;
-  background-image: linear-gradient(#808080, #d9d9d9);
   padding-top: 80px;
+  /*background: linear-gradient(#808080, #d9d9d9);*/
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${(props) => props.img}) center/ cover no-repeat;
 
   h2 {
     margin: 10px;

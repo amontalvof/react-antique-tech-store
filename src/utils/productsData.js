@@ -139,7 +139,7 @@ export const productsData = [
       url: "img/580b57fcd9996e24bc43c366.png",
     },
   },
-  {
+  /*{
     id: 11,
     title: "Compaq Vintage Computer",
     price: 40.99,
@@ -236,7 +236,7 @@ export const productsData = [
     image: {
       url: "img/g1wgilespmtkz3k9lmsu.png",
     },
-  },
+  },*/
   {
     id: 18,
     title: "Small Ghettoblaster",

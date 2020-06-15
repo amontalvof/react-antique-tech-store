@@ -15,6 +15,7 @@ import Products from "./pages/ProductsPage";
 import ScrollToTop from "./components/Scroll/ScrollToTop";
 import ScrollButton from "./components/ScrollButton";
 import Navbar from "./components/Navbar/";
+import Footer from "./components/Footer/";
 
 import { Application } from "react-rainbow-components";
 
@@ -62,6 +63,7 @@ function App() {
                 <Error />
               </Route>
             </Switch>
+            <Footer />
           </Application>
         </React.Fragment>
       </ScrollToTop>
