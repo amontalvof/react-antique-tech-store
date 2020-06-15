@@ -52,7 +52,7 @@ export default function ProductProvider({ children }) {
     if (search !== "") {
       newProducts = newProducts.filter((item) => {
         let title = item.title.toLowerCase().trim();
-        return title.startsWith(search) ? item : null;
+        return title.startsWith(search.toLowerCase().trim()) ? item : null;
       });
     }
     setPage(0);
