@@ -29,7 +29,7 @@ export const productsData = [
   },
   {
     id: 3,
-    title: "Vintage Ghettoblaster",
+    title: "Vintage Tape Player",
     price: 143.99,
     description:
       "Vinyl tumblr normcore affogato. 3 wolf moon man braid church-key, vape single-origin coffee hell of butcher helvetica photo booth pinterest. Polaroid beard keffiyeh pok pok vexillologist sriracha selvage chia. Farm-to-table synth vinyl vape. Hammock four loko celiac hell of four dollar toast. Sustainable bespoke leggings edison bulb listicle flannel. Echo park poke trust fund pitchfork biodiesel master cleanse, iPhone lomo church-key unicorn portland four loko yuccie venmo.",
@@ -113,7 +113,7 @@ export const productsData = [
   },
   {
     id: 9,
-    title: "Vintage Video Computer System Atari",
+    title: "Kaypro 4 Computer",
     price: 70.99,
     description:
       "Schlitz selvage kombucha fanny pack, squid pop-up umami DIY pinterest pok pok 90's. Pork belly pitchfork tilde gluten-free, fanny pack enamel pin craft beer mustache. Brooklyn offal meh shaman hashtag gochujang authentic, banjo heirloom. Pinterest chillwave pickled squid iPhone bushwick try-hard sriracha authentic deep v art party migas yr. Vinyl listicle affogato banh mi kinfolk tilde leggings tote bag pinterest, pitchfork fam mlkshk VHS vaporware everyday carry. Tote bag gluten-free asymmetrical wolf.",
