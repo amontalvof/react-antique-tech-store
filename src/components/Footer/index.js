@@ -19,8 +19,8 @@ export default function Footer() {
         </div>
         <div>
           <p>
-            Copyright &copy; amf-react-antique-tech-store{" "}
-            {new Date().getFullYear()}, all rights reserved.
+            Copyright &copy; Andy Montalvo {new Date().getFullYear()}, all
+            rights reserved.
           </p>
         </div>
       </div>
