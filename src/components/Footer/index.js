@@ -13,8 +13,7 @@ export default function Footer() {
         </div>
         <div>
           <p>
-            Copyright &copy; Andy Montalvo {new Date().getFullYear()}, all
-            rights reserved.
+            &copy; Andy Montalvo {new Date().getFullYear()}.
           </p>
         </div>
       </div>
